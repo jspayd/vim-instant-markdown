@@ -53,6 +53,8 @@ Installation
     "let g:instant_markdown_allow_unsafe_content = 1
     "let g:instant_markdown_allow_external_content = 0
     "let g:instant_markdown_mathjax = 1
+    "let g:instant_markdown_mathjax_config = 'my_config.json'
+    "let g:instant_markdown_mermaid = 1
     "let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
     "let g:instant_markdown_autoscroll = 0
     "let g:instant_markdown_port = 8888
@@ -138,6 +140,22 @@ let g:instant_markdown_mathjax = 1
 ```
 
 New in version `instant-markdown-d==0.2.0`
+
+### g:instant_markdown_mathjax_config
+This option allows you to specify your own MathJax config file. To do so, add
+the following to your .vimrc:
+
+```vim
+let g:instant_markdown_mathjax_config = 'my_config.json'
+```
+
+### g:instant_markdown_mermaid
+By default, no mermaid diagrams embedded within markdown would be rendered. This
+option uses mermaid and launches the node server as `instant-markdown-d --mermaid`.
+
+```vim
+let g:instant_markdown_mermaid = 1
+```
 
 ### g:instant_markdown_browser
 By default, browser is detected by `instant-markdown-d` depending on the OS.

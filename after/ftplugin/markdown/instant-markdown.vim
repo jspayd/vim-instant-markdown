@@ -115,6 +115,9 @@ function! s:startDaemon(initialMDLines)
         if g:instant_markdown_mathjax
             let argv .= ' --mathjax'
         endif
+        if exists('g:instant_markdown_mathjax_config')
+            let argv .= " --mathjax_config '".g:instant_markdown_mathjax_config."'"
+        endif
         if g:instant_markdown_mermaid
             let argv .= ' --mermaid'
         endif
